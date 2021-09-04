@@ -13,22 +13,35 @@ const UserInfo = () => {
     return(
         <S.Container>
             <S.Title>Info</S.Title>
-            <S.Field>Company: {user.company}</S.Field>
-            <S.Field>Followers: {user.followers}</S.Field>
-            <S.Field>Following:  {user.following}</S.Field>
-            <S.Field>
-                URL: 
+            <S.FieldContainer>
+                <S.Field>Company:</S.Field>
+                <S.Value>{user.company}</S.Value>
+            </S.FieldContainer>
+            <S.FieldContainer>
+                <S.Field>Followers:</S.Field>
+                <S.Value>{user.followers}</S.Value>
+            </S.FieldContainer>
+            <S.FieldContainer>
+                <S.Field>Following:</S.Field>
+                <S.Value>{user.following}</S.Value>
+            </S.FieldContainer>    
+            <S.FieldContainer>
+                <S.Field>URL:</S.Field>
                 <S.Link href={user.url}>
                     {user.url}
                 </S.Link> 
-            </S.Field>
-            <S.Field>
-                Blog: 
+            </S.FieldContainer> 
+            <S.FieldContainer>
+                <S.Field>Blog:</S.Field>
                 <S.Link href={user.blog}>
                     {user.blog}
                 </S.Link>
-            </S.Field>
-            <S.Field>Repositories: {user.repositories}</S.Field>
+            </S.FieldContainer> 
+            <S.FieldContainer>
+                <S.Field>Repositories:</S.Field>
+                <S.Value>{user.repositories}</S.Value>
+            </S.FieldContainer>        
+           
         </S.Container>
     )
 }

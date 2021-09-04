@@ -33,6 +33,7 @@ return (
             })
             .catch(err => {
                 console.log(err);
+                alert("User Not Found")
                 return null;
             })
 )   

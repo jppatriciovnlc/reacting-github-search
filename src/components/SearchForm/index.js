@@ -44,15 +44,19 @@ const SearchForm = () => {
 
     return(
         <>
-            <S.Container>
-                <input
+            <S.Container>               
+                <S.Input 
                     id="inputSearch"
                     type="text"
                     placeholder="Search"
                     onChange={(e) => handleChange(e) }
-
                 />
-                <button onClick={() => handleClick() }>Search</button>
+                <S.Button
+                    onClick={() => handleClick() }
+                >
+                    Search
+                </S.Button>
+                
             </S.Container>
             
 

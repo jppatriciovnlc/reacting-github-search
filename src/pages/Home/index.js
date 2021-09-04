@@ -21,6 +21,8 @@ const Home = (props) => {
     else{
         imageUrl = image;
     }
+
+    console.log(user)
    
     return(
         <>
@@ -46,18 +48,22 @@ const Home = (props) => {
                         </S.ProfileBio>
                     </S.ProfileBioContainer>
                 </S.ProfileContainer>
-                <S.RepoContainer>
-                    {                        
-                        repos.map((repo) => {  
-                            
-                            return(
-                                <RepoCard 
-                                    key={repo.id}
-                                    repo={repo}
-                                />
-                            )                            
-                        })
-                    }
+                <S.RepoContainer reps={user.repositories}>
+                    <S.RepoTitle>Repositories</S.RepoTitle>
+                    <S.Repos>
+                        {                        
+                            repos.map((repo) => {  
+                                
+                                return(
+                                    <RepoCard 
+                                        key={repo.id}
+                                        repo={repo}
+                                    />
+                                )                            
+                            })
+                        }
+                    </S.Repos>
+                    
                 </S.RepoContainer>
             </S.Container>
         </>
